@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="module" defer></script>
+    <title>Primer Parcial Laboratorio 3</title>
+</head>
+<body>
+    <header class="header">
+        <img src="./Imagenes/logo.jpeg" alt="logo_pagina">
+        <h1>Primer Parcial Laboratorio III - Maggiori, Gianni</h1>
+        <nav>
+            <ul id="listaFooter">
+                <li><a href="./paginaPrincipal.html">Home</a></li>
+                <li><a href="#">Personajes</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="seccion-titulo">
+            <h2>Crud Heroes</h2>
+        </section>
+        <div class="contenedor-principal">
+            <section class="abm">
+                <form id="formulario">
+                    <fieldset>
+                        <legend>Información Heroe</legend>
+                        <p>
+                            <label for="txtNombre">Ingrese el Nombre:</label>
+                            <br>
+                            <input type="text" name="txtNombre" placeholder="Nombre" autocomplete="off">
+                        </p>
+                        <fieldset>
+                            <legend>Editorial</legend>
+                            <input type="radio" name="rdoEditorial" value="dc">DC
+                            <input type="radio" name="rdoEditorial" value="marvel" checked>Marvel
+                        </fieldset>
+                        <p>
+                            <label for="txtAlias">Ingrese el Alias:</label>
+                            <br>
+                            <div class="botones-con-iconos">
+                                <img src="Imagenes/icono_antifaz.jpeg" alt="icono_estacionamiento">
+                                <input type="text" name="txtAlias" placeholder="Alias" autocomplete="off">
+                            </div>
+                        </p>
+                        <p>
+                            <label for="txtFuerza">Cantidad de fuerza:</label>
+                            <br>
+                            <div class="botones-con-iconos">
+                                <img src="Imagenes/icono_fuerza.jpeg" alt="icono_estacionamiento">
+                                <input type="number" name="txtFuerza" placeholder="Fuerza" min="0">
+                            </div>
+                        </p>
+                        <p>
+                            <label for="txtArmas">Tipo de Arma:</label>
+                            <br>
+                            <div class="botones-con-iconos">
+                                <img src="Imagenes/icono_armas.jpeg" alt="icono_estacionamiento">
+                                <select type="text" name="txtArmas" id="seleccionArmas"></select>
+                            </div>
+                        </p>
+                        <div class="botones">
+                            <input type="hidden" name="txtId">
+                            <input id="simular" type="button" value="Simular Heroes">
+                            <br>
+                            <input type="button" value="Buscar">
+                            <br>
+                            <input id="nuevo" type="submit" value="Nuevo">
+                            <br>
+                            <input id="cancelar" type="hidden" value="Cancelar">
+                            <br>
+                            <input id="eliminar" type="hidden" value="Eliminar">
+                            <br>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="list">
+                <fieldset>
+                    <legend>Heroes Disponibles</legend>
+                    <div id="table"></div>
+                </fieldset>
+            </section>
+        </div>
+    </main>
+    <div id="spinner" class="spinner"></div>
+    <footer class="footer">
+        <nav>
+            <ul id="listaFooter">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Anuncios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <p>Laboratorio III - Todos los derechos reservados 2023&copy;</p>
+    </footer>
+</body>
+</html>
